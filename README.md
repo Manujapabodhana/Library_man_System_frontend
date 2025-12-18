@@ -6,7 +6,7 @@ A modern, responsive web application for managing library operations including b
 
 - **User Authentication** - Secure login system with JWT authentication
 - **Book Management** - Add, view, and manage library books
-- **Dashboard Analytics** - Visual analytics and activity tracking
+- **Dashboard Analytics** - Visual analytics and insights
 - **Responsive Design** - Mobile-friendly interface
 - **Real-time Updates** - Dynamic content updates
 
@@ -37,7 +37,6 @@ src/
 │   ├── DashboardPage.tsx
 │   ├── LoginPage.tsx
 │   └── Dashboard/    # Dashboard sub-sections
-│       ├── ActivitySection.tsx
 │       ├── AddBookSection.tsx
 │       ├── AnalyticsSection.tsx
 │       └── BooksSection.tsx

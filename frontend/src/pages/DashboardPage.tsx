@@ -5,10 +5,9 @@ import Sidebar from "../Components/Sidebar";
 import AddBookSection from "./Dashboard/AddBookSection";
 import BooksSection from "./Dashboard/BooksSection";
 import AnalyticsSection from "./Dashboard/AnalyticsSection";
-import ActivitySection from "./Dashboard/ActivitySection";
 import "../App.css";
 
-type Tab = "books" | "add" | "analytics" | "activity";
+type Tab = "books" | "add" | "analytics";
 
 export default function Dashboard() {
   const [tab, setTab] = useState<Tab>("books");
@@ -41,7 +40,6 @@ export default function Dashboard() {
             {tab === "books" && <BooksSection key={booksRefreshKey} />}
             {tab === "add" && <AddBookSection onCreated={onCreated} />}
             {tab === "analytics" && <AnalyticsSection />}
-            {tab === "activity" && <ActivitySection />}
           </main>
         </div>
       </div>
