@@ -209,24 +209,52 @@ export default function LoginPage() {
             {loading ? "Loading..." : isLogin ? "Sign In" : "Sign Up"}
           </button>
 
-          <div style={{ textAlign: "center" }}>
-            <button
-              type="button"
-              onClick={() => {
-                setIsLogin(!isLogin);
-                setError("");
-              }}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#1e293b",
-                fontSize: "14px",
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-            >
-              {isLogin ? "Need an account? Sign up" : "Already have an account? Sign in"}
-            </button>
+          <div style={{ textAlign: "center", fontSize: "14px", color: "#475569" }}>
+            {isLogin ? (
+              <span>
+                Need an account?{" "}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsLogin(!isLogin);
+                    setError("");
+                  }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    color: "#1e293b",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                    padding: 0,
+                  }}
+                >
+                  Sign up
+                </button>
+              </span>
+            ) : (
+              <span>
+                Already have an account?{" "}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsLogin(!isLogin);
+                    setError("");
+                  }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    color: "#1e293b",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                    padding: 0,
+                  }}
+                >
+                  Sign in
+                </button>
+              </span>
+            )}
           </div>
         </form>
       </div>
